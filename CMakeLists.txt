@@ -8,7 +8,7 @@ configure_file( Version.h.in Version.h )
 
 add_executable( helloworld_cli main.cpp )
 
-add_library( version, LibVersion.cpp )
+add_library( lib_version, LibVersion.cpp )
 
 add_executable( test_version TestVersion.cpp )
 
