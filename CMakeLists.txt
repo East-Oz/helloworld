@@ -8,11 +8,11 @@ configure_file( Version.h.in Version.h )
 
 add_executable( helloworld_cli main.cpp )
 
-add_library( lib_version, LibVersion.cpp )
+add_library( lib_version LibVersion.cpp )
 
-add_executable( test_version TestVersion.cpp )
+add_executable( test_version version_test.cpp )
 
-set_target_properties( helloworld_cli helloworld test_version PROPERTIES
+set_target_properties( helloworld_cli lib_version test_version PROPERTIES
 	CXX_STANDART 14
 	CXX_STANDART_REQUIRED ON
 	COMPILE_OPTIONS "-Wpedantic;-Wall;-Wextra"
@@ -20,7 +20,7 @@ set_target_properties( helloworld_cli helloworld test_version PROPERTIES
 
 set_target_properties( test_version PROPERTIES 
 	COMPILE_DEFINITIONS BOOST_TEST_DYN_LINK
-	INCLUDE_DIRECTORIES ${BOOST_INCLUDE_DIR}
+	INCLUDE_DIRECTORIES ${Boost_INCLUDE_DIR}
 )
 
 target_link_libraries( helloworld_cli 
