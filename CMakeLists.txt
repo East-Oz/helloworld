@@ -12,8 +12,7 @@ add_library( lib_version LibVersion.cpp )
 
 add_executable( test_version version_test.cpp )
 
-#set_target_properties( helloworld_cli lib_version test_version PROPERTIES
-set_target_properties( helloworld_cli test_version PROPERTIES
+set_target_properties( helloworld_cli lib_version test_version PROPERTIES
 	CXX_STANDART 14
 	CXX_STANDART_REQUIRED ON
 	COMPILE_OPTIONS "-Wpedantic;-Wall;-Wextra"
@@ -41,7 +40,7 @@ set( CPAK_PACKAGE_VERSION_MAJOR "$(PROJECT_VERSION_MAJOR)" )
 set( CPAK_PACKAGE_VERSION_MINOR "$(PROJECT_VERSION_MINOR)" )
 set( CPAK_PACKAGE_VERSION_PATCH "$(PROJECT_VERSION_PATCH)" )
 
-set( CPACK_PACKAGE_CONTACT package_creator@creator.com )
+set( CPACK_PACKAGE_CONTACT surdukov@gmail.com )
 
 set( CPACK_DEBIAN_PACKAGE_SHLIBDEPS ON )
 
