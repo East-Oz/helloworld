@@ -28,7 +28,7 @@ target_link_libraries( helloworld_cli
 	lib_version 
 )
 
-target_link_libraries( helloworld_cli
+target_link_libraries( test_version
 	$(Boost_LIBRARIES)
 	lib_version
 )
