@@ -5,7 +5,7 @@ using namespace std;
 
 int main( int argc, char const *argv[] )
 {
+	cout << "build " << GetVersion() << endl;
 	cout << "Hello, World!" << endl;
-	cout << "Version: " << GetVersion() << endl;
 	return 0;
 }
